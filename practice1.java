@@ -14,18 +14,37 @@ public class practice1 {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        int addition = a + b;
-        int Subtraction = a - b;
-        int Multiplication = a * b;
-        int Division = a / b;
-        int remainder = a % b;
+        int operator = sc.nextInt();
 
-        System.out.println(addition);
-        System.out.println(Subtraction);
-        System.out.println(Multiplication);
-        System.out.println(Division);
-        System.out.println(remainder);
-        
+        switch (operator) {
+            case 1:
+                System.out.println(a + b);
+                break;
+            case 2:
+                System.out.println(a - b);
+                break;
+            case 3:
+                System.out.println(a * b);
+                break;
+            case 4:
+                if (b == 0) {
+                    System.out.println("Invalid Division");
+                } else {
+                    System.out.println(a / b);
+                }
+                break;
+            case 5:
+                if (b == 0) {
+                    System.out.println("Invalid Division");
+                } else {
+                    System.out.println(a % b);
+                }
+                break;
+
+            default:
+                System.out.println("Invalid Operator");
+        }
+
         sc.close();
     }
 }
